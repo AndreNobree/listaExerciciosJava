@@ -30,9 +30,8 @@ public class exe60 {
 
                 if ( idade > 30 ) { idadeM++; }
                 
-                if ( homemVelho == 0){ homemVelho += idade; }
-                else if ( idade > homemVelho ) { homemVelho = idade; maisVelhoString = nome; }
-                else { maisVelhoString = nome; }
+                if ( homemVelho == 0){ homemVelho += idade; maisVelhoString = nome; }
+                else if ( idade > homemVelho ) { homemVelho = idade; maisVelhoString = nome;  }
 
             }else if ( sexo.equals("F") ){
 
@@ -40,12 +39,13 @@ public class exe60 {
 
                 if ( mulherJovem == 0 ) { mulherJovem += idade; maisJovemString = nome;}
                 else if ( idade < mulherJovem ) { mulherJovem = idade; maisJovemString = nome;}
-                if ( idade >= mulherJovem) { mulherVelha = idade; maisVelhaString = nome; }
+                
+                if ( idade > mulherVelha) { mulherVelha = idade; maisVelhaString = nome; }
             }
         }
         //mais velho
-        if (homemVelho > mulherVelha){ System.out.println(mulherVelha); maisVelho = maisVelhoString; }
-        else { System.out.println("dfdfd2");maisVelho = maisVelhaString; }
+        if (homemVelho > mulherVelha){ maisVelho = maisVelhoString; }
+        else { maisVelho = maisVelhaString; }
         //média
         somaIdade /= 5;
         System.out.printf("A PESSOA MAIS VELHA É: %s\nO NOME DA MULHER MAIS JOVEM É: %s\nA MÉDIA DO GRUPO É: %d\n%d HOMENS TEM MAIS DE 30 ANOS\n%d MULHERES TEM MENOS DE 18 ANOS", maisVelho, maisJovemString, somaIdade, idadeM, idadeF);

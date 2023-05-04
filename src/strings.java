@@ -46,6 +46,7 @@ public class strings {
         System.out.println(A.equals("bom dia Joyce!!!"));
         System.out.println(A.equals("Bom dia Joyce!!!"));
         System.out.println("\n\nequalsIgnoreCase");
+        // ignora maiuscula e minuscula 
         System.out.println(A.equalsIgnoreCase("bom dia Joyce!!!"));
 
         // numero elevado
